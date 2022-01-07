@@ -1,0 +1,7 @@
+{
+  "name": "Ballads",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
