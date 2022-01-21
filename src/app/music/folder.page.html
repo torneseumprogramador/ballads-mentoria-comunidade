@@ -16,5 +16,38 @@
 
   <div id="container">
     <strong class="capitalize">{{ description }}</strong>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          ID
+        </ion-col>
+        <ion-col>
+          Título
+        </ion-col>
+        <ion-col>
+          Descrição
+        </ion-col>
+        <ion-col>
+          Play
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngFor="let music of musics">
+        <ion-col>
+          {{music.id}}
+        </ion-col>
+        <ion-col>
+          {{music.title}}
+        </ion-col>
+        <ion-col>
+          {{music.description}}
+        </ion-col>
+        <ion-col>
+          Em progresso ...
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
   </div>
 </ion-content>
