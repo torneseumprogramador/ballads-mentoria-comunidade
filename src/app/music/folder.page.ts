@@ -12,11 +12,13 @@ export class FolderPage implements OnInit {
   public title: string;
   public description: string;
   public musics = [];
+  public isList = true;
 
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     const slug = this.activatedRoute.snapshot.paramMap.get('id');
+    this.isList = slug.toLowerCase() == "lista";
     this.title = Menu.titleBySlug(slug);
     this.description = Menu.descriptionBySlug(slug);
 
