@@ -26,8 +26,9 @@
         {{music.description}}
       </ion-col>
       <ion-col>
-        <a href="{{music.path_of_music}}" target="_blank">Tocar</a>
+        <button (click)="tocar(music)">{{music.tocando ? "Pause" : "Play"}}</button>
       </ion-col>
     </ion-row>
   </ion-grid>
 </div>
+

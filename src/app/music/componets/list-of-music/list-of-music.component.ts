@@ -13,6 +13,19 @@ export class ListOfMusicComponent implements OnInit {
   @Input()
   musics: Music[];
 
+
   ngOnInit() {}
 
+  tocar(music:Music){
+    if(music.audio == null) music.audio = new Audio(music.path_of_music)
+
+    if(!music.tocando){
+      music.tocando = true
+      music.audio.play()
+    }
+    else{
+      music.tocando = false
+      music.audio.pause()
+    }
+  }
 }
